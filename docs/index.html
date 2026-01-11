@@ -3,11 +3,79 @@
 <head>
 <meta charset="UTF-8">
 <title>Arthur Tabenlac - Portfolio</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; background:#f4f6f8;}
+h1 { color:#1f3c88; }
+h2 { color:#2a5298; }
+.section { background:white; padding:20px; margin-bottom:20px; border-radius:8px;}
+.lang-btn { float:right; padding:10px; background:#1f3c88; color:white; border:none; cursor:pointer;}
+</style>
+<script>
+function showFR(){
+document.getElementById("fr").style.display="block";
+document.getElementById("en").style.display="none";
+}
+function showEN(){
+document.getElementById("fr").style.display="none";
+document.getElementById("en").style.display="block";
+}
+</script>
 </head>
+
 <body>
+
+<button class="lang-btn" onclick="showFR()">FR</button>
+<button class="lang-btn" onclick="showEN()">EN</button>
+
+<div id="fr">
+
 <h1>Arthur Tabenlac</h1>
 <h2>Étudiant ingénieur en agroalimentaire</h2>
-<p>Bienvenue sur mon portfolio professionnel.</p>
-<p>Spécialité : qualité, amélioration continue, production et sécurité des aliments.</p>
+
+<div class="section">
+<b>Profil</b><br>
+Étudiant ingénieur à JUNIA ISA Lille, spécialisé en qualité, amélioration continue, production et sécurité des aliments.
+</div>
+
+<div class="section">
+<b>Compétences</b><br>
+- HACCP, traçabilité, contrôle qualité<br>
+- Suivi des rendements, pertes matières<br>
+- Amélioration continue, 5S, PDCA
+</div>
+
+<div class="section">
+<b>Projet industriel – Mise en place du HACCP</b><br>
+Mise en place du système HACCP sur la ligne de production d'une pate à tartiner DADA au sein de l’entreprise Xpert Group.<br>
+Identification des dangers, définition des CCP, mise en place des contrôles et sécurisation de la production.
+</div>
+
+</div>
+
+<div id="en" style="display:none">
+
+<h1>Arthur Tabenlac</h1>
+<h2>Food Engineering Student</h2>
+
+<div class="section">
+<b>Profile</b><br>
+Food engineering student at JUNIA ISA Lille, specialized in quality, production and food safety.
+</div>
+
+<div class="section">
+<b>Skills</b><br>
+- HACCP, traceability, quality control<br>
+- Yield monitoring, material losses<br>
+- Continuous improvement, PDCA, 5S
+</div>
+
+<div class="section">
+<b>Industrial Project – HACCP Implementation</b><br>
+Implementation of the HACCP system on a spread DADA production line at Xpert Group.<br>
+Hazard analysis, definition of CCPs, control measures and food safety improvement.
+</div>
+
+</div>
+
 </body>
 </html>
