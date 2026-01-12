@@ -15,7 +15,7 @@ h2 { color:#2a5298; }
 }
 .profile {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 30px;
   margin-bottom: 40px;
 }
@@ -26,27 +26,18 @@ h2 { color:#2a5298; }
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
+.profile div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
 .profile h1 {
   margin: 0;
 }
 
 .profile h2 {
   margin-top: 8px;
-  color: #555;
-}
-
-.profile h1 {
-  margin: 0;
-}
-
-.profile h2 {
-  margin-top: 5px;
-  color: #555;
-}
-.profile h1 {
-  margin-bottom: 5px;
-}
-.profile h2 {
   color: #555;
 }
 </style>
