@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <title>Arthur Tabenlac – Portfolio</title>
@@ -7,19 +7,34 @@
 <style>
 body {
   font-family: Arial, sans-serif;
-  margin: 40px;
   background: #f5f5f5;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
   max-width: 900px;
   background: white;
+  margin: 40px auto;
   padding: 40px;
-  margin: auto;
   box-shadow: 0 0 15px rgba(0,0,0,0.1);
 }
 
-/* HEADER */
+.lang-buttons {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.lang-buttons button {
+  padding: 8px 14px;
+  margin-left: 10px;
+  border: none;
+  cursor: pointer;
+  background: #1f3c88;
+  color: white;
+  font-weight: bold;
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -28,7 +43,6 @@ body {
 
 .header img {
   width: 220px;
-  height: auto;
 }
 
 .header-text h1 {
@@ -43,8 +57,7 @@ body {
   font-weight: bold;
 }
 
-/* SECTIONS */
-h3 {
+.section-title {
   margin-top: 40px;
   color: #1f3c88;
 }
@@ -53,11 +66,30 @@ p {
   line-height: 1.6;
 }
 </style>
+
+<script>
+function showLang(lang) {
+  document.getElementById("fr").style.display = "none";
+  document.getElementById("en").style.display = "none";
+  document.getElementById("de").style.display = "none";
+  document.getElementById(lang).style.display = "block";
+}
+</script>
+
 </head>
 
 <body>
 
 <div class="container">
+
+<div class="lang-buttons">
+  <button onclick="showLang('fr')">FR</button>
+  <button onclick="showLang('en')">EN</button>
+  <button onclick="showLang('de')">DE</button>
+</div>
+
+<!-- ================= FR ================= -->
+<div id="fr">
 
 <div class="header">
   <img src="https://raw.githubusercontent.com/Arthu108/Arthur-Tbenlac.github.io/main/WhatsApp_Image_2026-01-12_at_00.35.44%5B1%5D.jpeg">
@@ -67,24 +99,66 @@ p {
   </div>
 </div>
 
-<h3>Profil</h3>
+<h3 class="section-title">Profil</h3>
 <p>
 Étudiant en ingénierie agroalimentaire spécialisé en qualité, sécurité sanitaire et amélioration des procédés de production.
 </p>
 
-<h3>Projet principal</h3>
+<h3 class="section-title">Projet principal</h3>
 <p>
 <strong>Mise en place du système HACCP sur une ligne de production de jus d’ananas – Xpert Group</strong><br><br>
 Analyse des écarts de rendement entre lots malgré une même quantité de matière première, identification des pertes et amélioration de la stabilité du procédé.
 </p>
 
-<h3>Compétences</h3>
-<ul>
-  <li>HACCP et sécurité alimentaire</li>
-  <li>Analyse des procédés de production</li>
-  <li>Contrôle qualité</li>
-  <li>Gestion des rendements</li>
-</ul>
+</div>
+
+<!-- ================= EN ================= -->
+<div id="en" style="display:none;">
+
+<div class="header">
+  <img src="https://raw.githubusercontent.com/Arthu108/Arthur-Tbenlac.github.io/main/WhatsApp_Image_2026-01-12_at_00.35.44%5B1%5D.jpeg">
+  <div class="header-text">
+    <h1>Arthur Tabenlac</h1>
+    <h2>Food Engineering Student</h2>
+  </div>
+</div>
+
+<h3 class="section-title">Profile</h3>
+<p>
+Food engineering student specialized in quality, food safety and production process optimization.
+</p>
+
+<h3 class="section-title">Main project</h3>
+<p>
+<strong>Implementation of HACCP on a pineapple juice production line – Xpert Group</strong><br><br>
+Analysis of yield variations despite identical raw material input, identification of losses and process stabilization.
+</p>
+
+</div>
+
+<!-- ================= DE ================= -->
+<div id="de" style="display:none;">
+
+<div class="header">
+  <img src="https://raw.githubusercontent.com/Arthu108/Arthur-Tbenlac.github.io/main/WhatsApp_Image_2026-01-12_at_00.35.44%5B1%5D.jpeg">
+  <div class="header-text">
+    <h1>Arthur Tabenlac</h1>
+    <h2>Student der Lebensmitteltechnik</h2>
+  </div>
+</div>
+
+<h3 class="section-title">Profil</h3>
+<p>
+Student der Lebensmitteltechnik mit Schwerpunkt Qualität, Lebensmittelsicherheit und Prozessoptimierung.
+</p>
+
+<h3 class="section-title">Hauptprojekt</h3>
+<p>
+<strong>Einführung des HACCP-Systems in einer Ananassaft-Produktionslinie – Xpert Group</strong><br><br>
+Analyse von Ertragsunterschieden trotz gleicher Rohstoffmengen, Identifikation von Verlusten und Prozessstabilisierung.
+</p>
+
+</div>
 
 </div>
 
