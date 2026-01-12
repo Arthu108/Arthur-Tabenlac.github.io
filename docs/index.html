@@ -2,228 +2,223 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Arthur Tabenlac – Portfolio</title>
+<title>Arthur Tabenlac – Ingénieur Agroalimentaire</title>
 
 <style>
 body {
-  margin: 0;
-  background: #f2f4f8;
   font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f4f6f8;
+  color: #222;
 }
 
-.container {
-  max-width: 1000px;
-  background: white;
-  margin: 40px auto;
-  padding: 50px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.1);
-}
-
-.lang {
-  text-align: right;
-  margin-bottom: 20px;
-}
-
-.lang button {
+header {
   background: #1f3c88;
   color: white;
-  border: none;
-  padding: 8px 14px;
-  margin-left: 10px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.header {
+  padding: 40px;
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 30px;
 }
 
-.header img {
-  width: 230px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+header img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
-.header-text h1 {
+header .text {
+  display: flex;
+  flex-direction: column;
+}
+
+header h1 {
   margin: 0;
-  font-size: 38px;
+  font-size: 36px;
 }
 
-.header-text h2 {
-  margin-top: 10px;
-  font-size: 22px;
-  color: #1f3c88;
+header h2 {
+  margin-top: 8px;
+  font-size: 20px;
   font-weight: bold;
+  color: #ffd369;
 }
 
-.section-title {
-  margin-top: 40px;
+nav {
+  background: #162b60;
+  padding: 15px;
+  text-align: center;
+}
+
+nav button {
+  margin: 5px;
+  padding: 10px 20px;
+  border: none;
+  background: #ffd369;
+  color: #162b60;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px;
+  display: none;
+}
+
+section.active {
+  display: block;
+}
+
+h3 {
   color: #1f3c88;
-  font-size: 22px;
-}
-
-p {
-  line-height: 1.7;
+  margin-top: 40px;
+  border-bottom: 2px solid #1f3c88;
+  padding-bottom: 5px;
 }
 
 ul {
-  line-height: 1.6;
+  list-style-type: square;
+  padding-left: 20px;
 }
 
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
 </style>
 
 <script>
-function showLang(lang) {
-  document.getElementById("fr").style.display = "none";
-  document.getElementById("en").style.display = "none";
-  document.getElementById("de").style.display = "none";
-  document.getElementById(lang).style.display = "block";
+function show(lang) {
+  document.querySelectorAll("section").forEach(s => s.classList.remove("active"));
+  document.getElementById(lang).classList.add("active");
 }
 </script>
-</head>
 
+</head>
 <body>
 
-<div class="container">
+<header>
+  <img src="https://raw.githubusercontent.com/Arthu108/Arthur-Tbenlac.github.io/main/WhatsApp_Image_2026-01-12_at_00.35.44%5B1%5D.jpeg">
+  <div class="text">
+    <h1>Arthur Tabenlac</h1>
+    <h2>Étudiant ingénieur en agroalimentaire</h2>
+  </div>
+</header>
 
-<div class="lang">
-  <button onclick="showLang('fr')">FR</button>
-  <button onclick="showLang('en')">EN</button>
-  <button onclick="showLang('de')">DE</button>
-</div>
+<nav>
+  <button onclick="show('fr')">Français</button>
+  <button onclick="show('en')">English</button>
+  <button onclick="show('de')">Deutsch</button>
+</nav>
 
-<!-- ================= FR ================= -->
-<div id="fr">
-
-<div class="header">
-<img src="https://raw.githubusercontent.com/Arthu108/Arthur-Tbenlac.github.io/main/WhatsApp_Image_2026-01-12_at_00.35.44%5B1%5D.jpeg">
-<div class="header-text">
-<h1>Arthur Tabenlac</h1>
-<h2>Étudiant ingénieur en agroalimentaire</h2>
-</div>
-</div>
-
-<h3 class="section-title">Profil</h3>
+<!-- FR -->
+<section id="fr" class="active">
+<h3>Profil</h3>
 <p>
-Actuellement en <strong>4<sup>e</sup> année du cycle ingénieur</strong> à <strong>JUNIA ISA (Lille)</strong>, je suis un futur ingénieur passionné par l’optimisation des processus et l’excellence opérationnelle.
-Ma formation me confère une solide base technique que je mets au service de la <strong>Qualité</strong>, de l’<strong>Amélioration Continue</strong> et de la <strong>Gestion de Production</strong>.
-Je suis motivé par l’analyse des processus et la mise en œuvre de solutions concrètes pour améliorer la performance industrielle.
+Actuellement en 4e année du cycle ingénieur à JUNIA ISA (Lille), je suis un futur ingénieur passionné par l’optimisation des processus et l’excellence opérationnelle.  
+Ma formation me donne une solide base technique que j’applique aux domaines de la Qualité, de l’Amélioration Continue et de la Gestion de Production.
 </p>
 
-<h3 class="section-title">🛠 Compétences techniques</h3>
-
-<strong>Qualité & Management</strong>
+<h3>🛠 Compétences techniques</h3>
+<div class="skill-grid">
+<div class="card">
+<b>Qualité & Management</b>
 <ul>
-<li>ISO 9001 et systèmes de management de la qualité</li>
-<li>HACCP, analyse des dangers et CCP</li>
+<li>ISO 9001, SMQ, audits internes</li>
+<li>HACCP</li>
 <li>Gestion des non-conformités (CAPA)</li>
-<li>Contrôle qualité, métrologie et plans de contrôle</li>
-<li>Rédaction de procédures et standardisation</li>
+<li>Plans de contrôle & métrologie</li>
+<li>Documentation qualité</li>
 </ul>
+</div>
 
-<strong>Amélioration continue</strong>
+<div class="card">
+<b>Amélioration Continue</b>
 <ul>
 <li>Kaizen</li>
 <li>Lean Manufacturing</li>
-<li>Six Sigma (DMAIC)</li>
-<li>Résolution de problèmes (PDCA)</li>
+<li>Six Sigma – DMAIC</li>
+<li>PDCA</li>
+<li>Gestion du changement</li>
 </ul>
+</div>
 
-<strong>Production & organisation industrielle</strong>
+<div class="card">
+<b>Production & Organisation</b>
 <ul>
-<li>Gestion des flux et des stocks</li>
-<li>Planification de production (PIC, PDP)</li>
-<li>Organisation des ateliers et des postes</li>
+<li>Gestion des flux & stocks</li>
+<li>PIC / PDP</li>
+<li>Analyse de capacité</li>
+<li>Organisation d’atelier</li>
 </ul>
+</div>
+</div>
 
-<h3 class="section-title">💻 Outils & méthodes</h3>
+<h3>💻 Outils & Méthodes</h3>
+<div class="skill-grid">
+<div class="card">
 <ul>
-<li>VSM (Value Stream Mapping)</li>
+<li>VSM</li>
 <li>5S</li>
-<li>Kanban / Just-in-Time</li>
+<li>Kanban / JAT</li>
 <li>SMED</li>
 <li>Poka-Yoke</li>
-<li>Microsoft Excel (avancé), Word, PowerPoint</li>
 </ul>
+</div>
 
-  <h3 class="section-title">🌟 Qualités professionnelles</h3>
+<div class="card">
 <ul>
-  <li>Curiosité intellectuelle</li>
-  <li>Adaptabilité</li>
-  <li>Organisation et rigueur</li>
-  <li>Gestion du stress</li>
-  <li>Facilité d’apprentissage</li>
-  <li>Esprit critique</li>
-  <li>Orientation solution</li>
-  <li>Aptitude à la communication inter-équipes</li>
-  <li>Autonomie</li>
-  <li>Proactivité</li>
+<li>Excel avancé (TCD, formules)</li>
+<li>Word</li>
+<li>PowerPoint</li>
 </ul>
+</div>
+</div>
 
-<h3 class="section-title">⛔ Axes d’amélioration</h3>
+<h3>🌟 Qualités professionnelles</h3>
 <ul>
-  <li>Exigence élevée envers moi-même pouvant mener à trop de temps passé sur l’analyse.</li>
-  <li>Orientation très forte vers la tâche en période de stress, parfois au détriment de la communication informelle.</li>
+<li>Curiosité intellectuelle</li>
+<li>Adaptabilité</li>
+<li>Organisation et rigueur</li>
+<li>Gestion du stress</li>
+<li>Facilité d’apprentissage</li>
+<li>Esprit critique</li>
+<li>Orientation solution</li>
+<li>Communication inter-équipes</li>
+<li>Autonomie</li>
+<li>Proactivité</li>
 </ul>
 
-</div>
-
-<!-- ================= EN ================= -->
-<div id="en" style="display:none">
-
-<div class="header">
-<img src="https://raw.githubusercontent.com/Arthu108/Arthur-Tbenlac.github.io/main/WhatsApp_Image_2026-01-12_at_00.35.44%5B1%5D.jpeg">
-<div class="header-text">
-<h1>Arthur Tabenlac</h1>
-<h2>Food Engineering Student</h2>
-</div>
-</div>
-
-<h3 class="section-title">Profile</h3>
-<p>
-Currently in the <strong>4th year of the engineering cycle</strong> at <strong>JUNIA ISA (Lille)</strong>, I am a future engineer passionate about process optimization and operational excellence.
-I apply my technical background to <strong>Quality</strong>, <strong>Continuous Improvement</strong> and <strong>Production Management</strong>.
-</p>
-
-<h3 class="section-title">Skills</h3>
+<h3>⛔ Axes d’amélioration</h3>
 <ul>
-<li>ISO 9001, HACCP, CAPA, audits</li>
-<li>Lean, Kaizen, Six Sigma, PDCA</li>
-<li>Production planning and flow management</li>
-<li>VSM, 5S, Kanban, SMED</li>
-<li>Excel, Word, PowerPoint</li>
+<li>Exigence élevée pouvant conduire à trop d’analyse.</li>
+<li>Forte orientation tâche en période de stress.</li>
 </ul>
+</section>
 
-</div>
+<!-- EN -->
+<section id="en">
+<h3>Profile</h3>
+<p>Food engineering student focused on quality, continuous improvement and industrial performance.</p>
+</section>
 
-<!-- ================= DE ================= -->
-<div id="de" style="display:none">
-
-<div class="header">
-<img src="https://raw.githubusercontent.com/Arthu108/Arthur-Tbenlac.github.io/main/WhatsApp_Image_2026-01-12_at_00.35.44%5B1%5D.jpeg">
-<div class="header-text">
-<h1>Arthur Tabenlac</h1>
-<h2>Student der Lebensmitteltechnik</h2>
-</div>
-</div>
-
-<h3 class="section-title">Profil</h3>
-<p>
-Ich befinde mich im 4. Studienjahr an der JUNIA ISA mit Schwerpunkt Qualität, kontinuierliche Verbesserung und Produktionsmanagement.
-</p>
-
-<h3 class="section-title">Fähigkeiten</h3>
-<ul>
-<li>ISO, HACCP, Qualitätsmanagement</li>
-<li>Lean, Kaizen, PDCA</li>
-<li>Produktionsorganisation</li>
-<li>Excel, Word, PowerPoint</li>
-</ul>
-
-</div>
-
-</div>
+<!-- DE -->
+<section id="de">
+<h3>Profil</h3>
+<p>Student der Lebensmitteltechnik mit Schwerpunkt Qualität und Prozessoptimierung.</p>
+</section>
 
 </body>
 </html>
